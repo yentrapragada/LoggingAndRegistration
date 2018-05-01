@@ -1,0 +1,26 @@
+Creating StoredProcedure to register a user : 
+
+Create proc spRegisterUser  
+@UserName nvarchar(100),  
+@Password nvarchar (200),  
+@Email nvarchar (200)  
+as  
+Begin  
+ Declare @Count int  
+ Declare @ReturnCode int  
+   
+ Select @Count = COUNT(UserName)   
+ from tblUsers where UserName = @UserName  
+ If @Count > 0  
+ Begin  
+  Set @ReturnCode = -1  
+ End  
+ Else  
+ Begin  
+  Set @ReturnCode = 1  
+  --Change: Column list specified while inserting
+  Insert into tblUsers([UserName], [Password], [Email]) 
+  values  (@UserName, @Password, @Email)  
+ End  
+ Select @ReturnCode as ReturnValue  
+End  
