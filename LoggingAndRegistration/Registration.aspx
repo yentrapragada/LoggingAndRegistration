@@ -69,7 +69,7 @@
             </tr>
             <tr>
                 <td class="auto-style2">
-                    <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                    <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
                 </td>
                 <td class="auto-style3">&nbsp;&nbsp;
                     <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" />
@@ -78,7 +78,7 @@
             </tr>
             <tr>
                 <td class="auto-style2">
-                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" HeaderText="Error List" />
                 </td>
                 <td class="auto-style3">&nbsp;</td>
                 <td>&nbsp;</td>

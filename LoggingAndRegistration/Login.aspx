@@ -46,7 +46,7 @@
             </tr>
             <tr>
                 <td class="auto-style2">
-                    <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                    <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
